@@ -22,7 +22,7 @@ class Card{
 
         this.parentElement = parentElement
         this.element = document.createElement("div")
-        this.element.card = this // I don't know if this is legal
+        this.element.card = this // this is a hack to make the card object available to the click event
         this.makeCardHtml()
         this.parentElement.appendChild(this.element)
 
