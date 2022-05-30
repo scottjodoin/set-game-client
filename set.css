@@ -1,0 +1,84 @@
+.card {
+    margin: 1rem;
+    border-radius: 1rem;
+    border: solid 2px lightgrey;
+    background: white;
+    width: 10rem !important;;
+    height:5rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.card.hint{
+    background: pink;
+}
+.card > span {
+    pointer-events: none;
+    height:90%;
+}
+
+[shape] > span {
+    display:block;
+    background-repeat: repeat-x;
+    background-size: 2.95rem 100%;
+}
+
+.card[count="1"] > span {width:3rem;}
+.card[count="2"] > span {width:6rem;}
+.card[count="3"] > span {width:9rem;}
+
+.card[shape="diamond"] > span {background-image:url("diamond.svg");}
+.card[shape="oval"] > span {background-image:url("oval.svg");}
+.card[shape="squiggly"] > span {background-image:url("squiggly.svg");}
+
+.card[shape="diamond"][shade="stripe"] > span {background-image:url("diamond-stripe.svg");}
+.card[shape="oval"][shade="stripe"] > span {background-image:url("oval-stripe.svg");}
+.card[shape="squiggly"][shade="stripe"] > span {background-image:url("squiggly-stripe.svg");}
+
+.card[shape="diamond"][shade="solid"] > span {background-image:url("diamond-solid.svg");}
+.card[shape="oval"][shade="solid"] > span {background-image:url("oval-solid.svg");}
+.card[shape="squiggly"][shade="solid"] > span {background-image:url("squiggly-solid.svg");}
+
+
+.card[color="green"] > span {filter:hue-rotate(120deg) brightness(200%) saturate(80%)}
+.card[color="purple"] > span{ filter:hue-rotate(-40deg) brightness(80%) saturate(80%)}
+.card[color="red"] > span{filter:hue-rotate(20deg)}
+
+#table{
+    background:lightyellow;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+#table > .card{
+    cursor:pointer
+}
+
+.player-deck {
+    background-color:lightgreen;
+    padding:1rem;
+    min-height:4rem;
+}
+.player-deck .card{
+    position:relative;
+    margin:0;
+    margin-left:4px;
+    width: 10rem!important
+}
+
+.player-deck .card+span {
+    display:none;
+}
+
+#deck {
+    display:none;
+    background:lightblue;
+}
+
+#button-box {
+    margin: 1rem 0;
+}
+
+.card.selected {
+    border: solid 2px green;
+}

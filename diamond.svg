@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="6.8267465mm"
+   height="13.525142mm"
+   viewBox="0 0 6.8267466 13.525142"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="diamond.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#cccccc"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="10.248373"
+     inkscape:cx="4.4397293"
+     inkscape:cy="20.832576"
+     inkscape:window-width="1280"
+     inkscape:window-height="961"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8856"
+       is_visible="true"
+       lpeversion="1" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-58.960762,-189.0299)">
+    <path
+       style="fill:#000000;stroke-width:0.264583"
+       id="path21"
+       d="" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#ff0074;stroke-width:0.263836;stroke-opacity:1"
+       id="rect99"
+       width="7.3113527"
+       height="7.3113527"
+       x="-44.103069"
+       y="-182.52797"
+       transform="matrix(0.4505991,-0.89272641,-0.4505991,-0.89272641,0,0)" />
+  </g>
+</svg>
