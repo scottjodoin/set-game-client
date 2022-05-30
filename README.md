@@ -2,6 +2,8 @@
 
 This is a simple client-side version of Set. I made it because I wanted to know if I was in fact adding three cards when there were no sets available.
 
+[Play online now](https://scottjodoin.github.io/set-game-client/set.html)
+
 ## Buttons
 
 Reset: Resets the game
