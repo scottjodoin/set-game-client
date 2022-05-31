@@ -4,7 +4,15 @@ const CARD_TYPES = {
     "shade":["solid","stripe","empty"],
     "count":["1","2","3"]
 }
-
+const audioSet = [
+  new Audio('set1.mp3'),
+  new Audio('set2.mp3'),
+  new Audio('set3.mp3'),
+  new Audio('set4.mp3'),
+]
+const splatSound = new Audio('splat.mp3')
+const clickSound = new Audio('click.mp3');
+const oopsSound = new Audio('oops.mp3')
 let _cardID = 1
 let _lastCard = null
 let _locked = false;
@@ -40,11 +48,13 @@ class Card{
     }
 
     setSelected(b){
+        clickSound.play();
         if (b) this.element.classList.add("selected")
         else this.element.classList.remove("selected")
     }
     
     setHint(b){
+        clickSound.play();
         if (b) this.element.classList.add("hint")
         else this.element.classList.remove("hint")
     }
@@ -138,7 +148,11 @@ function sameOrDifferent(l){
 }
 
 function moveCardsToPlayer(id){
+  
+    playSetSound();
+
     playerDeck = document.getElementById(`player-${id}-deck`);
+    
     while (_selected.length > 0){
         card = _selected.pop()
         card.setSelected(false)
@@ -147,6 +161,12 @@ function moveCardsToPlayer(id){
         _table.splice(_table.indexOf(card),1)
         _lastCard = card;
     }
+}
+
+function playSetSound(){
+    let audio = audioSet[Math.floor(Math.random() * audioSet.length)]
+    audio.playbackRate = 0.8 + Math.random() * 0.4
+    audio.play()
 }
 
 function resetSelected(){
@@ -169,8 +189,10 @@ function repopulateTable(count){
 function add3cards(){
     if (noSets())
         repopulateTable(table.childElementCount + 3)
-    else
+    else{
+        oopsSound.play()
         alert("There is a set in there somewhere!")
+    }
 }
 
 function hint(){
@@ -182,7 +204,7 @@ function hint(){
         add3cards()
         return;
     }
-
+    splatSound.play();
     _hint.pop().setHint(true)
     _hintCount++;
     updateStats();
