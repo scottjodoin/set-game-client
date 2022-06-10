@@ -78,12 +78,20 @@ class Card{
 }
 
 
+
+
 // get all relevant elements
 deck = document.getElementById("deck")
 table = document.getElementById("table")
 document.getElementById("add3").addEventListener("click",add3cards)
 document.getElementById("hint").addEventListener("click",hint)
 document.getElementById("reset").addEventListener("click",reset)
+
+chkColor = document.getElementById("checkbox-color");
+chkCount = document.getElementById("checkbox-count");
+chkShade= document.getElementById("checkbox-shade");
+chkShape = document.getElementById("checkbox-shape");
+
 
 // create all cards
 let _cards = []
@@ -107,7 +115,12 @@ function reset(){
             for(let shade of CARD_TYPES.shade)
                 for(let shape of CARD_TYPES.shape){
                     //card = new Card("3","squiggly","red",shade, deck, onClicked)
-                    card = new Card(count,shape,color,shade, deck, onClicked)
+                    ccolor = (chkColor.checked) ? color : CARD_TYPES["color"][0];
+                    ccount  = (chkCount.checked ) ? count : CARD_TYPES["count"][0] ;
+                    sshade = (chkShade.checked ) ? shade : CARD_TYPES["shade"][0];
+                    sshape = (chkShape.checked ) ? shape : CARD_TYPES["shape"][0];
+
+                    card = new Card(ccount,sshape,ccolor,sshade, deck, onClicked)
                     _cards.push(card)
                     _deck.push(card)
                 }

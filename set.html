@@ -11,7 +11,28 @@
     <div id="container">
         <div id="table"></div>
         <div id="button-box">
-            <button id="reset">Reset</button>
+            <span class="checkbox-container">
+                <div>
+                    <input type="checkbox" id="checkbox-color" checked>
+                    <label for="checkbox-color">Color</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="checkbox-count" checked>
+                    <label for="checkbox-count">Number</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="checkbox-shade" checked>
+                    <label for="checkbox-shade">Shading</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="checkbox-shape" checked>
+                    <label for="checkbox-shape">Shape</label>
+                </div>
+                <div>
+                    <button id="reset">Reset</button>
+                </div>
+            </span>
+
             <button id="add3">Add 3</button>
             <button id="hint">Hint</button>
             <span>Hints:</span><span id="hint-count">0</span>

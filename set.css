@@ -77,6 +77,18 @@
 
 #button-box {
     margin: 1rem 0;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+#button-box > *:not(:nth-child(1)) {
+    margin-left: 1rem;
+}
+.checkbox-container {
+    padding: 0.5rem;
+    border: solid 1px lightgrey;
+    border-radius: 4px;
 }
 
 .card.selected {
